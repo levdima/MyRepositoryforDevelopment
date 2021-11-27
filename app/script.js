@@ -77,7 +77,15 @@
 
 // 5.We want this code to log out the numbers 0, 1, 2, 3 in that order,
 // but it doesn’t do what we expect - fix that(find two solutions)
+for (let i = 0; i < 4; ++i) {
+    setTimeout(() => { console.log(i); }, 1000 * i)
+}
+for (var i = 0; i < 4; ++i) {
+    do_alert(i);
+}
 
-for (let i = 0; i < 4; i++) {
-    setTimeout(() => console.log(i), 0)
+function do_alert(num) {
+    setTimeout(function() {
+        console.log(num);
+    }, 1000 * num);
 }
